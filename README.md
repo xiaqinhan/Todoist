@@ -1,1 +1,1 @@
-# Todoist
+This repository purpose is that practice my skills with website https://todoist.com/?lang=en
