@@ -36,10 +36,23 @@
         max-width: 950px;
         height: 100%;
     }
+    .left_menu_toggle {
+        padding: 5px 0;
+        padding-right: 5px;
+        color: white;
+        display: none;
+    }
+    a: -webkit-any-link {
+        cursor: pointer;
+    }
+    .left_menu_toggle svg{
+        padding: 2px;
+    }
     #logo {
         float: left;
         margin-left: 36px;
         padding-top: 7px;
+        display: block;
     }
     #top_icons {
         float: right;
@@ -128,6 +141,9 @@
 <body>
     <div id="top_bar">
         <div id="top_bar_inner">
+            <a href="#" class="left_menu_toggle menu_toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svgs-path="sm1/menu.svg">
+                    <path fill-rule="evenodd" fill="currentColor" d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z"></path></svg></a>
             <div id="logo" data-track="navigation|todoist_logo"><a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svgs-path="sm1/todoist_logo.svg" class="light_icon"><path fill="currentColor" fill-rule="evenodd" d="M21 0H3a3 3 0 0 0-3 3v3.7L4 9c.4.2.8.2 1.1 0l8-4.6a.8.8 0 0 1 .8 0l1 .5c.2.2.1.6 0 .7L5.1 11c-.4.3-.7.3-1.2 0L0 8.8v2l4 2.4c.4.2.8.2 1.1 0l8-4.6a.8.8 0 0 1 .8 0l1 .5c.2.1.1.5 0 .6l-9.7 5.6c-.4.2-.7.3-1.2 0A857 857 0 0 1 0 13v2l4 2.3c.4.2.8.2 1.1 0l8-4.6a.8.8 0 0 1 .8 0l1 .5c.2.2.1.6 0 .7l-9.7 5.5c-.4.3-.7.3-1.2 0a857 857 0 0 1-4-2.3v4A3 3 0 0 0 3 24h18a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3"></path></svg></a>
             </div>
@@ -153,6 +169,7 @@
                         <input class="quick_find fixed_pos" type="text text_box" placeholder="Quick Find" autocomplete="off" autocorrect="off" spellcheck="false"><a href="/Help/Filtering" class="help_icon" target="_blank" data-track="navigation|quick_find_help" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/question.svg" class="light_icon"><g fill="none" fill-rule="evenodd"><path fill="currentColor" d="M11.9 16.5c-.46 0-.8-.35-.8-.85s.34-.86.8-.86c.48 0 .8.36.8.86s-.32.85-.8.85zM9.5 9.87c.06-1.32.9-2.37 2.54-2.37 1.46 0 2.46.95 2.46 2.21 0 .96-.47 1.64-1.22 2.11-.73.46-.94.8-.94 1.45v.4h-1.02v-.57c0-.8.37-1.36 1.16-1.86.68-.43.94-.82.94-1.47 0-.76-.56-1.32-1.43-1.32-.87 0-1.43.55-1.5 1.42H9.5z"></path><circle cx="12" cy="12" r="7.5" stroke="currentColor"></circle></g></svg></a></div></div>
         </div>
     </div>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svgs-path="sm1/menu.svg"><path fill-rule="evenodd" fill="currentColor" d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z"></path></svg>
 </body>
 </html>
 <!--
