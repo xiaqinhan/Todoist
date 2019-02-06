@@ -54,11 +54,17 @@
         padding-top: 7px;
         display: block;
     }
+    #logo svg {
+        width: 24px;
+        height: 24px;
+        padding: 2px;
+    }
     #top_icons {
         float: right;
         height: 100%;
         white-space: nowrap;
         padding-right: 12px;
+        display: block;
     }
     #top_icons #quick_add_task_holder {
         position: relative;
@@ -66,26 +72,43 @@
     }
     #top_icons>span {
         display: flex;
+        -webkit-box-align: center;
         align-items: center;
+        box-sizing: border-box;
         float: left;
         height: 100%;
         margin-left: 10px;
         cursor: pointer;
-        -webkit-box-align: center;
     }
     #top_icons #top_completed_holder {
         position: relative;
     }
+    #top_completed_holder a {
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+    }
     #top_icons #notifications_counter {
         position: relative;
     }
+    #notifications_counter {
+        vertical-align: middle;
+    }
+    #top_icons #notifications_counter svg {
+        padding: 2px 4px;
+    }
     #top_icons #gear_holder {
         position: relative;
+    }
+    #top_icons #gear_holder svg {
+        padding: 2px 4px;
+        pointer-events: none;
     }
     #quick_find {
         white-space: nowrap;
         margin-left: 328px;
         padding-top: 6px;
+        display: block;
     }
     #top_bar .light_icon {
         color: #fff;
@@ -114,6 +137,23 @@
         margin-top: 2px;
         background: 0;
         transition: width .2s ease-in;
+    }
+    input {
+        font-size: 13px;
+        -webkit-appearance: textfield;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        margin:0em;
+        font: 400 13.33px arial;
+        -webkit-writing-mode: horizontal-tb;
     }
     #quick_find .help_icon {
         position: relative;
@@ -161,15 +201,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" data-svgs-path="sm1/gear.svg" class="light_icon"><defs>
                         <path id="sm1/gear/a" d="M5.7 2.8A7 7 0 0 1 7 2.3v-1l.1-.8a1 1 0 0 1 .4-.4l.8-.1h1.4l.8.1.4.4.1.8v1l1.3.5.7-.7.7-.4a1 1 0 0 1 .5 0l.7.4 1 1 .4.7a1 1 0 0 1 0 .5L16 5l-.7.7.5 1.3h1l.8.1.4.4.1.8v1.4l-.1.8a1 1 0 0 1-.4.4l-.8.1h-1a7 7 0 0 1-.5 1.3l.7.7.4.7a1 1 0 0 1 0 .5l-.4.7-1 1-.7.4a1 1 0 0 1-.5 0L13 16l-.7-.7a7 7 0 0 1-1.3.5v1l-.1.8a1 1 0 0 1-.4.4l-.8.1H8.3l-.8-.1a1 1 0 0 1-.4-.4l-.1-.8v-1a7 7 0 0 1-1.3-.5l-.7.7-.7.4a1 1 0 0 1-.5 0L3 16l-1-1-.4-.7a1 1 0 0 1 0-.5L2 13l.7-.7a7 7 0 0 1-.5-1.3h-1l-.8-.1a1 1 0 0 1-.4-.4L0 9.7V8.3l.1-.8a1 1 0 0 1 .4-.4l.8-.1h1l.5-1.3-.7-.7-.4-.7a1 1 0 0 1 0-.5L2 3l1-1 .7-.4a1 1 0 0 1 .5 0L5 2l.7.7zM9 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(3 3)"><mask id="sm1/gear/b" fill="currentColor"><use xlink:href="#sm1/gear/a"></use></mask><use fill="currentColor" xlink:href="#sm1/gear/a"></use></g></svg></span>
             </div>
-            <div id="quick_find"><div>
+            <div id="quick_find">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" data-svgs-path="sm1/search.svg" class="search_icon light_icon"><defs>
                     <path id="sm1/search/a" d="M11.44 10.73l4.41 4.42a.5.5 0 0 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.71zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(4 4)">
                         <mask id="sm1/search/b" fill="#fff"><use xlink:href="#sm1/search/a"></use></mask>
                         <g mask="url(#sm1/search/b)"><path fill="currentColor" d="M-3-4h24v24H-4z"></path></g></g></svg>
-                        <input class="quick_find fixed_pos" type="text text_box" placeholder="Quick Find" autocomplete="off" autocorrect="off" spellcheck="false"><a href="/Help/Filtering" class="help_icon" target="_blank" data-track="navigation|quick_find_help" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/question.svg" class="light_icon"><g fill="none" fill-rule="evenodd"><path fill="currentColor" d="M11.9 16.5c-.46 0-.8-.35-.8-.85s.34-.86.8-.86c.48 0 .8.36.8.86s-.32.85-.8.85zM9.5 9.87c.06-1.32.9-2.37 2.54-2.37 1.46 0 2.46.95 2.46 2.21 0 .96-.47 1.64-1.22 2.11-.73.46-.94.8-.94 1.45v.4h-1.02v-.57c0-.8.37-1.36 1.16-1.86.68-.43.94-.82.94-1.47 0-.76-.56-1.32-1.43-1.32-.87 0-1.43.55-1.5 1.42H9.5z"></path><circle cx="12" cy="12" r="7.5" stroke="currentColor"></circle></g></svg></a></div></div>
+                <input class="quick_find fixed_pos" type="text text_box" placeholder="Quick Find" autocomplete="off" autocorrect="off" spellcheck="false">
+                <a href="/Help/Filtering" class="help_icon" target="_blank" data-track="navigation|quick_find_help" style="opacity: 1; display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/question.svg" class="light_icon"><g fill="none" fill-rule="evenodd">
+                        <path fill="currentColor" d="M11.9 16.5c-.46 0-.8-.35-.8-.85s.34-.86.8-.86c.48 0 .8.36.8.86s-.32.85-.8.85zM9.5 9.87c.06-1.32.9-2.37 2.54-2.37 1.46 0 2.46.95 2.46 2.21 0 .96-.47 1.64-1.22 2.11-.73.46-.94.8-.94 1.45v.4h-1.02v-.57c0-.8.37-1.36 1.16-1.86.68-.43.94-.82.94-1.47 0-.76-.56-1.32-1.43-1.32-.87 0-1.43.55-1.5 1.42H9.5z"></path>
+                        <circle cx="12" cy="12" r="7.5" stroke="currentColor"></circle></g></svg></a>
+            </div>
         </div>
     </div>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-svgs-path="sm1/menu.svg"><path fill-rule="evenodd" fill="currentColor" d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z"></path></svg>
 </body>
 </html>
 <!--
