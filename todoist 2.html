@@ -18,10 +18,15 @@
         background-color: #dd4b39;
         margin: 0;
         padding: 0;
+        height: 40px;
     }
     .leftside {
         width: 30%;
         max-width: 296px;
+        background-color: #fafafa;
+        float: left;
+        height: 100%;
+        width: 100%;
     }
     .rightside {
         width: 70%;
@@ -29,15 +34,13 @@
     }
     ul {
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+        
     }
     .header img {
         width: 30px;
         height: 30px;
         border: 0;
         margin-left: 30px;
-        float: left
     }
     .row:after {
         content: "";
@@ -48,8 +51,21 @@
 </head> 
 <body>
     <div class="header">
-        <a href="https://todoist.com">
-            <img src="topleft.png" alt="Home Page">
+        <a href="">
+            <img src="topleft.png" alt="Home Page" style="float: left;">
+        </a>
+        <input type="search" name="search" placeholder="Quick Find">
+        <a href="">
+            <img src="right4.png" alt="tool" style="float: right;  margin-right: 30px;">
+        </a>
+        <a href="">
+            <img src="right3.png" alt="Notifications" style="float: right;">
+        </a>
+        <a href="">
+            <img src="right2.png" alt="Your productivity" style="float: right;">
+        </a>
+        <a href="">
+            <img src="right1.png" alt="quick add task" style="float: right; " >
         </a>
     </div>
     <div class="row">
@@ -58,10 +74,19 @@
                 <li>inbox</li>
                 <li>Today</li>
                 <li>Next 7 days</li>
+                <li>Project</li>
+                <li>Welcome</li>
+                <li>Add project</li>
+                <li>Archived projects</li>
+                <li>Labels</li>
+                <li>Filters</li>
             </ul>
         </div>
         <div class="rightside">
+            <ul>
+                <li>Today</li>
 
+            </ul>
         </div>
     </div>
 </body>
