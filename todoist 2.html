@@ -14,62 +14,88 @@
         padding: 0;
         margin: 0;
     }
-    .header {
+    #top-header {
         background-color: #dd4b39;
         margin: 0;
         padding: 0;
-        height: 40px;
+        height: 43px;
     }
-    .leftside {
+    #headerinside {
+        margin: 0 auto;
+        max-width: 900px;
+        display: flex;
+    }
+    #search {
+        width: 300px;
+        background-color: #dd4b39;
+        padding-left: 30px;
+        background-image: url("search.svg") no-repeat left;
+        transition: width 4s;
+    }
+    #search:focus {
+        width: 800px;
+        background-color: white;
+    }
+    #headerinside img {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        padding: auto;
+        margin: auto;
+    }
+    #content {
+        margin: 0;
+        padding: 0;
+        height: 95vh;
+        display: flex;
+    }
+    #leftside {
         width: 30%;
         max-width: 296px;
         background-color: #fafafa;
-        float: left;
         height: 100%;
-        width: 100%;
     }
-    .rightside {
+    #rightside {
         width: 70%;
         max-width: 596px;
     }
     ul {
         list-style-type: none;
-        
     }
-    .header img {
-        width: 30px;
-        height: 30px;
-        border: 0;
-        margin-left: 30px;
-    }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+
+    @media screen and (max-width:600px) {
+        #leftside {
+            display: none;
+        }
+        #rightside {
+            width:100%;
+        }
     }
     </style>
 </head> 
 <body>
-    <div class="header">
-        <a href="">
-            <img src="topleft.png" alt="Home Page" style="float: left;">
-        </a>
-        <input type="search" name="search" placeholder="Quick Find">
-        <a href="">
-            <img src="right4.png" alt="tool" style="float: right;  margin-right: 30px;">
-        </a>
-        <a href="">
-            <img src="right3.png" alt="Notifications" style="float: right;">
-        </a>
-        <a href="">
-            <img src="right2.png" alt="Your productivity" style="float: right;">
-        </a>
-        <a href="">
-            <img src="right1.png" alt="quick add task" style="float: right; " >
-        </a>
+    <div id="top-header">
+        <div id="headerinside">
+            <a href="">
+                <img src="homepage.svg" alt="Home Page" >
+            </a>
+            <input id="search" name="search" placeholder="Quick Find">
+            <a href="">
+                <img src="add.svg" alt="add" >
+            </a>
+            <a href="">
+                <img src="productivity.svg" alt="productivity">
+            </a>
+            <a href="">
+                <img src="notifications-bell-button.svg" alt="notifications-bell-button">
+            </a>
+            <a href="">
+                <img src="settings.svg" alt="settings" >
+            </a>
+        </div>
     </div>
-    <div class="row">
-        <div class="leftside">
+    <div id="content">
+        <div id="leftside">
             <ul>
                 <li>inbox</li>
                 <li>Today</li>
@@ -82,7 +108,7 @@
                 <li>Filters</li>
             </ul>
         </div>
-        <div class="rightside">
+        <div id="rightside">
             <ul>
                 <li>Today</li>
 
