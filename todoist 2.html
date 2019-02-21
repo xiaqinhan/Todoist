@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
     <title>Todoist</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3">
-
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
     * {
         box-sizing: border-box;
@@ -13,6 +13,7 @@
     body {
         padding: 0;
         margin: 0;
+        background-color: #fafafa;
     }
     #top-header {
         background-color: #dd4b39;
@@ -24,6 +25,9 @@
         margin: 0 auto;
         max-width: 900px;
         display: flex;
+    }
+    .fa-home:hover, .fa-cross:hover {
+        color: white;
     }
     #search {
         width: 300px;
@@ -43,8 +47,22 @@
         padding: auto;
         margin: auto;
     }
+    #leftside ul {
+        list-style-type: none;
+        margin: 15px;;
+        padding: 0;
+    }
+    #leftside li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+    #leftside li a:hover {
+        background-color: white;
+    }
     #content {
-        margin: 0;
+        max-width: 900px;
+        margin: auto;
         padding: 0;
         height: 95vh;
         display: flex;
@@ -58,6 +76,7 @@
     #rightside {
         width: 70%;
         max-width: 596px;
+        background-color: white;
     }
     ul {
         list-style-type: none;
@@ -76,12 +95,12 @@
 <body>
     <div id="top-header">
         <div id="headerinside">
-            <a href="">
-                <img src="homepage.svg" alt="Home Page" >
+            <a id="home" href="">
+                <i class="fas fa-home" style="font-size: 28px;"></i>
             </a>
             <input id="search" name="search" placeholder="Quick Find">
-            <a href="">
-                <img src="add.svg" alt="add" >
+            <a id="cross" href="">
+                <i class="fas fa-cross" style="font-size: 28px;"></i>
             </a>
             <a href="">
                 <img src="productivity.svg" alt="productivity">
@@ -97,21 +116,21 @@
     <div id="content">
         <div id="leftside">
             <ul>
-                <li>inbox</li>
-                <li>Today</li>
-                <li>Next 7 days</li>
-                <li>Project</li>
-                <li>Welcome</li>
-                <li>Add project</li>
-                <li>Archived projects</li>
-                <li>Labels</li>
-                <li>Filters</li>
+                <li><a href="">inbox</a></li>
+                <li><a href="">Today</a> </li>
+                <li><a href="">Next 7 days</a> </li>
+                <li><a href="">Project</a> </li>
+                <li><a href="">Welcome</a> </li>
+                <li><a href="">Add project</a> </li>
+                <li><a href="">Archived projects</a> </li>
+                <li><a href="">Labels</a> </li>
+                <li><a href="">Filters</a> </li>
             </ul>
         </div>
         <div id="rightside">
             <ul>
                 <li>Today</li>
-
+                
             </ul>
         </div>
     </div>
